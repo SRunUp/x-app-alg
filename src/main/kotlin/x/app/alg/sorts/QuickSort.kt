@@ -3,9 +3,11 @@ package x.app.alg.sorts
 /**
  * @author shiyajun
  * @date 2020/9/7 10:50 上午
- * 找到基准值
- * 少于基准值的放左边
- * 大于基准值的放右边
+ * 1、找到基准值
+ * 2、少于基准值的放左边
+ * 3、大于基准值的放右边
+ * 递归公式：quick_sort(A[l to r]) = quick_sort(A[l to q]) + quick_sort(A[q+1 to r])
+ * 终止条件：if l >= r
  * */
 object QuickSort {
     fun sort(array: IntArray) {
@@ -37,7 +39,6 @@ object QuickSort {
             }
         }
         Utils.swap(array, i, r)
-
         return i
     }
 }
