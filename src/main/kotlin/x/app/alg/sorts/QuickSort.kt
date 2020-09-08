@@ -3,11 +3,6 @@ package x.app.alg.sorts
 /**
  * @author shiyajun
  * @date 2020/9/7 10:50 上午
- * 1、找到基准值
- * 2、少于基准值的放左边
- * 3、大于基准值的放右边
- * 递归公式：quick_sort(A[l to r]) = quick_sort(A[l to q]) + quick_sort(A[q+1 to r])
- * 终止条件：if l >= r
  * */
 object QuickSort {
     fun sort(array: IntArray) {
@@ -23,10 +18,6 @@ object QuickSort {
 
     /**
      * 分区操作
-     * 这⾥的处理有点类似选择排序。我们通过游标 i 把 A[l...r-1] 分成两部分。
-     * A[l...i-1] 的元素都是⼩于 pivot 的，我们暂且叫它“已处理区间”,A[i...r-1] 是“未处理区间”。
-     * 我们每次都从未处理的区间 A[i…r-1] 中取⼀个元素A[j]，与 pivot 对⽐
-     * 如果⼩于 pivot，则将其加⼊到已处理区间的尾部，也就是A[i]的位置。
      * */
     private fun partition(array: IntArray, l: Int, r: Int): Int {
         val pivot = array[r]
