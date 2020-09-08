@@ -16,7 +16,7 @@ object SelectionSort {
                 }
             }
 
-            Utils.swap(array, i, minIndex)
+            array.swap(i, minIndex)
         }
     }
 }

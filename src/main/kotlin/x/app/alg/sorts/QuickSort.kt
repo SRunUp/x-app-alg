@@ -25,11 +25,11 @@ object QuickSort {
 
         for (j in l until r) {
             if (array[j] < pivot) {
-                Utils.swap(array, i, j)
+                array.swap(i, j)
                 i++
             }
         }
-        Utils.swap(array, i, r)
+        array.swap(i, r)
         return i
     }
 }

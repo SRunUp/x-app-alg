@@ -5,9 +5,8 @@ import org.junit.jupiter.api.Test
 internal class BubbleSortTest {
     @Test
     fun test() {
-        val array = intArrayOf(5, 4, 3, 1, 6)
+        val array = intArrayOf(5, 11, 8, 6, 7)
         BubbleSort.sort(array)
-
-        println(array.joinToString(","))
+        array.print()
     }
 }
