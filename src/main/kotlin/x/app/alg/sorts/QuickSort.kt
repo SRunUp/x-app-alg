@@ -15,21 +15,21 @@ object QuickSort {
         sortInternally(array, l, q - 1)
         sortInternally(array, q + 1, r)
     }
+}
 
-    /**
-     * 分区操作
-     * */
-    private fun partition(array: IntArray, l: Int, r: Int): Int {
-        val pivot = array[r]
-        var i = l
+/**
+ * 分区操作
+ * */
+fun partition(array: IntArray, l: Int, r: Int): Int {
+    val pivot = array[r]
+    var i = l
 
-        for (j in l until r) {
-            if (array[j] < pivot) {
-                array.swap(i, j)
-                i++
-            }
+    for (j in l until r) {
+        if (array[j] < pivot) {
+            array.swap(i, j)
+            i++
         }
-        array.swap(i, r)
-        return i
     }
+    array.swap(i, r)
+    return i
 }
