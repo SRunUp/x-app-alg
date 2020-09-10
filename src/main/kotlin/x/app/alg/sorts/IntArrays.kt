@@ -16,3 +16,7 @@ fun IntArray.swap(i: Int, j: Int) {
 fun IntArray.print() {
     println(this.joinToString(","))
 }
+
+fun IntArray.print(lazyMessage: () -> String) {
+    println("""${lazyMessage()} [${this.joinToString(",")}]""")
+}

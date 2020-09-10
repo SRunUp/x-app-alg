@@ -7,6 +7,5 @@ internal class BubbleSortTest {
     fun test() {
         val array = intArrayOf(5, 11, 8, 6, 7)
         BubbleSort.sort(array)
-        array.print()
     }
 }

@@ -16,6 +16,8 @@ object InsertionSort {
                 --j
             }
             array[j + 1] = key
+            array.print() { "当前数组：" }
+
         }
     }
 }
