@@ -11,7 +11,7 @@ internal class QuickSortTest {
     @Test
     fun sort() {
         val array = intArrayOf(5, 11, 8, 6, 7)
-        QuickSort.sort(array)
+        quickSort(array)
         array.print()
     }
 }

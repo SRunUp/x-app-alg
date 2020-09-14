@@ -12,7 +12,7 @@ internal class TopKthTest {
     fun `use quick select`() {
         val arrange = intArrayOf(5, 11, 6, 7, 8)
         val excepted = 6
-        val actual = TopKth.findKthUseQuickSelect(arrange, 2)
+        val actual = findKthUseQuickSelect(arrange, 2)
         assertEquals(excepted, actual)
     }
 }

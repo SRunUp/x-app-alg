@@ -4,18 +4,18 @@ package x.app.alg.sorts
  * @author shiyajun
  * @date 2020/9/7 10:50 上午
  * */
-object QuickSort {
-    fun sort(array: IntArray) {
-        sortInternally(array, 0, array.size - 1)
-    }
 
-    private fun sortInternally(array: IntArray, l: Int, r: Int) {
-        if (l >= r) return
-        val q = partition(array, l, r)
-        sortInternally(array, l, q - 1)
-        sortInternally(array, q + 1, r)
-    }
+fun quickSort(array: IntArray) {
+    quickSortInternally(array, 0, array.size - 1)
 }
+
+private fun quickSortInternally(array: IntArray, l: Int, r: Int) {
+    if (l >= r) return
+    val q = partition(array, l, r)
+    quickSortInternally(array, l, q - 1)
+    quickSortInternally(array, q + 1, r)
+}
+
 
 /**
  * 分区操作
