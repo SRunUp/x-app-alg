@@ -33,3 +33,30 @@ fun partition(array: IntArray, l: Int, r: Int): Int {
     array.swap(i, r)
     return i
 }
+
+/**
+ * 泛型实现方式
+ * */
+fun <T : Comparable<T>> partition(array: Array<T>, low: Int, high: Int): Int {
+    var left = low
+    var right = high
+    val mid = left + (right - left) / 2
+    val pivot = array[mid]
+
+    while (left <= right) {
+        while (array[left] < pivot) {
+            left++
+        }
+
+        while (array[right] > pivot) {
+            right--
+        }
+
+        if (left <= right) {
+            swap(array, left, right)
+            left++
+            right--
+        }
+    }
+    return left
+}

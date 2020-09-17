@@ -13,6 +13,14 @@ fun IntArray.swap(i: Int, j: Int) {
     this[j] = temp
 }
 
+fun <T : Comparable<T>> swap(array: Array<T>, idx1: Int, idx2: Int) {
+    if (idx1 == idx2 || array[idx1] == array[idx2]) return
+
+    array[idx1] = array[idx2].also {
+        array[idx2] = array[idx1]
+    }
+}
+
 fun IntArray.print() {
     println(this.joinToString(","))
 }
