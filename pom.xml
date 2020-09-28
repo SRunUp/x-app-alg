@@ -11,11 +11,7 @@
     <groupId>x.app</groupId>
     <artifactId>alg</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-<<<<<<< HEAD
     <name>x-app-alg</name>
-=======
-    <name>alg</name>
->>>>>>> 8a55f7fa8762dd3c9d8d8e4282c848359aaf7586
     <description>算法练习</description>
 
     <properties>
@@ -45,14 +41,6 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-<<<<<<< HEAD
-=======
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
->>>>>>> 8a55f7fa8762dd3c9d8d8e4282c848359aaf7586
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
             <exclusions>
