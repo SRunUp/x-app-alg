@@ -6,6 +6,8 @@ internal class BubbleSortTest {
     @Test
     fun test() {
         val array = intArrayOf(5, 11, 8, 6, 7)
+        array.firstOrNull { it == 8 }
+        linkedMapOf<Int,Int>()
         BubbleSort.sort(array)
     }
 }

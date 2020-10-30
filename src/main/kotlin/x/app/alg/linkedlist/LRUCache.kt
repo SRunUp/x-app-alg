@@ -29,6 +29,15 @@ class LRUCache(private val capacity: Int) {
      */
     private val head: DLinkedNode
     private val tail: DLinkedNode
+
+    init {
+        head = DLinkedNode()
+        tail = DLinkedNode()
+        head.next = tail
+        tail.prev = head
+    }
+
+
     operator fun get(key: Int): Int {
         val node = cache[key] ?: return -1
 
@@ -81,12 +90,7 @@ class LRUCache(private val capacity: Int) {
         head.next = node
     }
 
-    init {
-        head = DLinkedNode()
-        tail = DLinkedNode()
-        head.next = tail
-        tail.prev = head
-    }
+
 }
 
 /**
