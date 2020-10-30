@@ -1,5 +1,8 @@
 package x.app.alg.linkedlist
 
+import java.util.*
+
+
 /**
  * @author shiyajun
  * @date 2020/10/30 11:00 上午
@@ -85,3 +88,19 @@ class LRUCache(private val capacity: Int) {
         tail.prev = head
     }
 }
+
+/**
+ * 基于 LinkedHashMap*/
+class LRUCache2(private val capacity: Int) :
+        LinkedHashMap<Int, Int>(capacity, 0.75f, true) {
+    override operator fun get(key: Int): Int {
+        return super.getOrDefault(key, -1)
+    }
+
+    override fun removeEldestEntry(eldest: Map.Entry<Int, Int>): Boolean {
+        return size > capacity
+    }
+}
+
+
+
