@@ -3,6 +3,7 @@ package x.app.alg.array
 /**
  * @author shiyajun
  * @date 2020/12/15 11:16 上午
+ * 连续的区间信息
  * */
 object Continuous {
     fun consecutiveRange(array: IntArray): List<List<Int>> {
